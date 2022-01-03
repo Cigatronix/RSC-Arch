@@ -8,6 +8,9 @@ import { dailyLoginReducer } from "shared/sharedRodux/dailyLoginReducer";
 
 const localPlayer = Players.LocalPlayer;
 
+/**
+ * The client state handler.
+ */
 export class stateHandler {
 	/**
 	 * The store of the local client.
@@ -63,5 +66,6 @@ export class stateHandler {
 	}
 }
 
+// Connections
 remotesClass.createStoreRemote.OnClientEvent.Connect(stateHandler.createStore);
 remotesClass.storeReplicationRemote.OnClientEvent.Connect(() => stateHandler.updateStore);

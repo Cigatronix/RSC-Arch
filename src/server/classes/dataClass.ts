@@ -13,7 +13,7 @@ const createRemoteEvents = remotesClass.createRemotes();
 assert(createRemoteEvents, `There was an issue while initializing the game's remote events.`);
 
 /**
- * Handles data saving.
+ * Initializes a player's saved profile upon joining, initializes a rodux store for the player, and saves any progress made upon player leaving.
  */
 export class dataClass {
 	/**

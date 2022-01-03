@@ -5,7 +5,7 @@ import { StoreActions, ValidProfile } from "shared/sharedRodux";
 
 export class remotesClass {
 	/**
-	 * Folder to handle remote events.
+	 * A `Folder` object to handle remote events.
 	 */
 	public static remotesFolder: Folder;
 
@@ -21,6 +21,8 @@ export class remotesClass {
 
 	/**
 	 * Creates remotes for the class, upon request by the server.
+	 *
+	 * @returns success = boolean;
 	 */
 	public static createRemotes(): { success: boolean } {
 		this.remotesFolder = Make("Folder", {
