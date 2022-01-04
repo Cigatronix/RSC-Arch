@@ -15,9 +15,9 @@ export const eventMiddleware = function (player: Player): Rodux.Middleware {
 	return (nextDispatch) => {
 		return (action: StoreActions) => {
 			if (action.replicateToAllClients !== undefined) {
-				storeReplicationRemote.FireAllClients(action);
+				storeReplicationRemote.FireAllClients(player, action);
 			} else {
-				storeReplicationRemote.FireClient(player, action);
+				storeReplicationRemote.FireClient(player, player, action);
 			}
 		};
 	};
