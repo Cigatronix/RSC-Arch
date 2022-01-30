@@ -19,6 +19,8 @@ export const eventMiddleware = function (player: Player): Rodux.Middleware {
 			} else {
 				storeReplicationRemote.FireClient(player, player, action);
 			}
+
+			return nextDispatch;
 		};
 	};
 };
